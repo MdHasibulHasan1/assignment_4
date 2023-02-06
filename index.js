@@ -45,7 +45,7 @@ function isLGSeven(number){
     }
     // difference multiplied  by 2
     else{
-        return difference*2;
+        return number*2;
     }
 }
 
