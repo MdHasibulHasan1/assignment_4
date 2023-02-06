@@ -1,11 +1,10 @@
 
 // Problem-01
+/* The work of this function take a positive number. than multiplying by that number by three, than adding 10, than dividing by two, than subtracting five and return the result. */
 function mindGame(number){
-    // Check Input Validation
     if(number<0 || typeof number!="number"){
         return "Please, Enter a valid number";
     }
-    // number multiplied  by 3
     const multiplication = number * 3;
     const sum = multiplication+10;
     const division = sum/2;
@@ -14,14 +13,13 @@ function mindGame(number){
     return subtraction;
 }
 
-
+//  The work of this function is to check whether the length of the string is odd or even
 // problem -02
 function evenOdd(myString){
     // Check Input Validation
     if( myString=="" || typeof myString !="string"){
         return "Please, Enter a valid data";
     }
-    // Is Even
     else if (myString.length%2==0) {
         return "even";
     }
@@ -32,24 +30,23 @@ function evenOdd(myString){
 
 
 // problem-03
-
+/* The work of this function to check input number difference from 7. then check the difference is smaller than seven then return the difference. if don't smaller than 7, it will be return double of the input number. */
 function isLGSeven(number){
     const difference = number -7;
     // Check Input Validation
     if (typeof number!="number") {
         return "Please, Enter a valid number";
     }
-    //is difference smaller than 7
     else if (difference<7) {
         return difference;
     }
-    // difference multiplied  by 2
     else{
         return number*2;
     }
 }
 
 // Problem-04
+// The work of this function is to find bad data
 function findingBadData(numbers){
     let countBadData = 0;
     const isArray = Array.isArray(numbers);
@@ -64,7 +61,6 @@ function findingBadData(numbers){
             if (typeof number != "number") {
                 return "Array element must be a number";
             }
-            // number is smaller than 0
             else if (number<0) {
                 countBadData++;
             }
@@ -75,6 +71,7 @@ function findingBadData(numbers){
 
 
 // Problem-05
+// How many diamond can be found by using gems
 function gemsToDiamond(firstFriendGems, secondFriendGems, thirdFriendGems){
     const firstFriendDiamond = firstFriendGems*21;
     const secondFriendDiamond = secondFriendGems*32;
@@ -84,7 +81,6 @@ function gemsToDiamond(firstFriendGems, secondFriendGems, thirdFriendGems){
     if (typeof firstFriendGems!= "number" || typeof secondFriendGems != "number" || typeof thirdFriendGems != "number") {
         return "All parameter must be a number";
     }
-    // totalDiamond is bigger than 1000*2
     else if (totalDiamond>1000*2) {
         return totalDiamond-2000;
     }
