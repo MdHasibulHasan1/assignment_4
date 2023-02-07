@@ -13,7 +13,7 @@ function mindGame(number){
     return subtraction;
 }
 
-//  The work of this function is to check whether the length of the string is odd or even
+//  The work of this function is check whether the length of the string is odd or even
 // problem -02
 function evenOdd(myString){
     // Check Input Validation
@@ -27,7 +27,6 @@ function evenOdd(myString){
         return "odd";
      }
  }
-
 
 // problem-03
 /* The work of this function to check input number difference from 7. then check the difference is smaller than seven then return the difference. if don't smaller than 7, it will be return double of the input number. */
@@ -69,7 +68,6 @@ function findingBadData(numbers){
     return countBadData;
 }
 
-
 // Problem-05
 // How many diamond can be found by using gems
 function gemsToDiamond(firstFriendGems, secondFriendGems, thirdFriendGems){
@@ -78,8 +76,9 @@ function gemsToDiamond(firstFriendGems, secondFriendGems, thirdFriendGems){
     const thirdFriendDiamond = thirdFriendGems*43;
     const totalDiamond = firstFriendDiamond + secondFriendDiamond + thirdFriendDiamond;
     // Check Input Validation
-    if (typeof firstFriendGems!= "number" || typeof secondFriendGems != "number" || typeof thirdFriendGems != "number") {
-        return "All parameter must be a number";
+    if (typeof firstFriendGems!= "number" || typeof secondFriendGems != "number" || typeof thirdFriendGems != "number" || firstFriendGems<0 || secondFriendGems
+    <0 || thirdFriendGems<0) {
+        return "All parameter must be a positive number";
     }
     else if (totalDiamond>1000*2) {
         return totalDiamond-2000;
